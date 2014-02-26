@@ -1,0 +1,19 @@
+{
+  "name": "presentation-sync",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jean-Charles Sisk <jeancharles@paypal.com>",
+  "license": "ISC",
+  "dependencies": {
+    "shoe": "0.0.15",
+    "express": "~3.4.8",
+    "sockjs": "~0.3.8"
+  },
+  "devDependencies": {
+    "tape": "~2.5.0"
+  }
+}

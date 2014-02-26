@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <script src="http://cdn.sockjs.org/sockjs-0.3.min.js"></script>
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+</head>
+<body>
+
+<script>
+  var sock = new SockJS('/ws');
+  var actions = {
+    goto: function (state) {
+      console.log(state);
+    }
+  };
+  function gotUser(r) {
+    var uuid = r.uuid;
+    var digest = r.digest;
+    sock.send(JSON.stringify({
+      action: 'associate',
+      args: [uuid, digest]
+    }));
+  }
+  sock.onopen = function () {
+    sock.onmessage = function (e) {
+      var meta = JSON.parse(e.data);
+      if (meta.action && actions[meta.action]) {
+        actions[meta.action].apply(this, meta.args);
+      }
+    };
+    $.getJSON('/api/user', gotUser);
+  };
+  sock.onclose = function () {
+    sock.onmessage = function () {};
+  };
+</script>
+</body>
+</html>
