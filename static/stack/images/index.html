@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet" type="text/css">
+<style>
+
+@import url(stack.css);
+
+.big {
+  font-size: 128px;
+}
+
+.caption, .subcaption {
+  text-align: center;
+  text-shadow: 0px 2px 6px rgba(0,0,0,.5);
+}
+
+.caption {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 125px;
+}
+
+.subcaption {
+  font-weight: 300;
+  font-size: 68px;
+  color: #969696;
+}
+
+h3 {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  color: #222;
+  margin: 0;
+  position: relative;
+  top: -100px;
+}
+
+.upper {
+  text-transform: uppercase;
+}
+
+.brief {
+  background: #e7e6e4 url('images/briefs.jpg') no-repeat center right;
+  background-size: contain;
+}
+
+.brief h3 {
+  background-color: #222;
+  color: #fff;
+}
+
+.brief p {
+  position: absolute;
+  bottom: 0;
+}
+
+#map, .content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+#map {
+  z-index: 10;
+}
+.content {
+  z-index: 11;
+  padding: 160px 80px;
+}
+
+.content span {
+  display: inline-block;
+  padding: 5px 20px;
+  background-color: rgba(0,0,0,.4);
+}
+
+</style>
+<body class="overview">
+
+<section>
+  <h1 class="caption upper">Tips and Tricks</h1>
+  <h2 class="subcaption">A love story by <strong>Jean-Charles</strong></h2>
+</section>
+
+<section class="brief">
+  <h3>Brief Intro</h3>
+  <p>Get it? Hah</p>
+</section>
+
+<section style="">
+  <div id="map"></div>
+  <div class="content">
+    <p><span>Name: <b>Jean-Charles</b></span></p>
+    <p><span>Location: <b>Boston</b></span></p>
+    <p><span>Special talent: <b>Interpretive Dance</b></span></p>
+  </div>
+</section>
+
+<section>
+  <h3>GIT</h3>
+  <p>First, here's some stuff you already know.</p>
+</section>
+
+<section>
+  <h3>GIT</h3>
+  <p>Git is a <b>decentralized version control</b> system.</p>
+  <p>By default, when you <b>clone</b>, you'll have the <b>complete repository history</b>.</p>
+</section>
+
+<section>
+  <h3>GIT</h3>
+  <p>Git leverages an intermediate <b>index</b>.<br>
+  You <b>add into</b> and <b>commit from</b> your index.</p>
+</section>
+
+<section>
+  <h3>GIT</h3>  <h3 style="background-color: transparent; color: #fff;">Tip 1</h3>
+  <p>gitconfig, aliases, and <b>git-</b> executables</p>
+</section>
+
+<section>
+  <h3>GIT</h3>  <h3 style="background-color: transparent; color: #fff;">Tip 2</h3>
+  <p><b>git notes</b> <i>or</i><br>
+  how to avoid "wtf was I thinking?!"</p>
+</section>
+
+<section>
+  <h3>GIT</h3>  <h3 style="background-color: transparent; color: #fff;">Tip 3</h3>
+  <p><b>git stash</b> to avoid <b>WIP</b></p>
+  <p>Stash objects can be treated like other git objects</p>
+</section>
+
+<section>
+  <h3>GIT</h3>  <h3 style="background-color: transparent; color: #fff;">Tip 4</h3>
+  <p><b>hub</b> - it brings the 'hub to git</p>
+
+  <p style="position: absolute; bottom: 0;" class="grey">duh</p>
+</section>
+
+<section>
+  <h3>GIT</h3>  <h3 style="background-color: transparent; color: #fff;">Bonus Material</h3>
+  <p>tig, pushing to multiple remotes at once, git reflog, instaweb &hellip;</p>
+</section>
+
+<section>
+  <h3>GitHub</h3>
+  <p>First, here's more stuff you already know.</p>
+</section>
+
+<section>
+  <h3>GitHub</h3>
+  <p>GitHub is a <b>GUI</b> web frontend to Git.</p>
+  <p>By default, when you <b>clone</b>, you'll have the <b>complete repository history</b>.</p>
+</section>
+
+<section style="background: red; color: white;">
+  <p class="caption">GitHub is not GIT<br>
+  is not GitHub</p>
+</section>
+
+<section>
+  <h3>GitHub</h3>  <h3 style="background-color: transparent; color: #fff;">Tip 1</h3>
+  <p>URL modifiers (?w=1, .patch, .diff)</p>
+</section>
+
+<section>
+  <h3>GitHub</h3>  <h3 style="background-color: transparent; color: #fff;">Tip 2</h3>
+  <p>Mentioning issues, closing automatically, etc</p>
+</section>
+
+<section>
+  <h3>GitHub</h3>  <h3 style="background-color: transparent; color: #fff;">Tip 3</h3>
+  <p>Checkboxes in PRs</p>
+</section>
+
+<section>
+  <h3>GitHub</h3>  <h3 style="background-color: transparent; color: #fff;">Tip 4</h3>
+  <p class="caption">Emoji!</p>
+</section>
+
+<section>
+  <h3>GitHub</h3>  <h3 style="background-color: transparent; color: #fff;">Bonus Material</h3>
+  <p>keyboard shortcuts ("y"!), pasting images, </p>
+</section>
+
+<script src="d3.v3.min.js"></script>
+<script src="stack.v0.min.js"></script>
+<script type="text/javascript"
+  src="https://maps.googleapis.com/maps/api/js?sensor=false">
+</script>
+<script type="text/javascript">
+  function initialize() {
+    var mapOptions = {
+      center: new google.maps.LatLng(42.3581, -71.0636),
+      zoom: 14
+    };
+    var map = new google.maps.Map(document.getElementById("map"),
+        mapOptions);
+  }
+  (function () {
+    d3.select(window).on('hashchange.stack', function go() {
+      if (+location.hash.slice(1) === 2) {
+        initialize();
+        go = function () {};
+      }
+    });    
+  }());
+</script>

@@ -17,8 +17,10 @@ app.use('/api', api.routes);
 app.get('/api/users', session.bind(function (req, res) {
   var strippedUsers = Object.keys(user.actives).map(function (id) {
     var guy = JSON.parse(JSON.stringify(user.actives[id]));
+    delete guy.verified;
     delete guy.digest;
     delete guy.role;
+    guy.sid = id;
     return guy;
   });
   res.json(strippedUsers);
